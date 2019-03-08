@@ -33,16 +33,9 @@ body {
     float: left;
     height: 60px;
     margin-top: 0px;
-    margin-left: 40vmin;
+    /* //margin-left: 40vmin; */
+    
 }
-
-.menu:nth-child(1n+2) {
-    background: #edc029;
-}
-
-/* li:nth-child(2) {
-    background: #edc029;
-} */
 
 .menu li {
     position: relative;
@@ -76,17 +69,35 @@ body {
     /* left: 0px; */
     background-color: #fff;
     display: none;
+    
 }
 
 .menu li:hover ul, .menu li.over ul {display: block;}
 
-.menu li ul li {
+ul.menu li ul li {
     border: 1px solid #a29f9f;
     display: block;
-    width: 152.6px;
+    /* width: 172.6px; */
+    /* padding: 5px; */
+    margin-left: 0; 
     
+}
 
-    /* padding: 5px 60px; */
-    /* margin: 0px;  */
-    
+.menu ul li {
+    background: rgb(155, 122, 122);
+    width: 200px;
+    height: 40px;
+}
+
+.menu ul li a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    padding: 0;
+    width: 180px;
+    display: block;
+    margin: auto;
+    top: 50%;
+    left: 50;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
