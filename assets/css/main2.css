@@ -20,6 +20,11 @@ time, mark, audio, video {
    box-sizing: border-box;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script:400,700');
+
+
 body {
     background: rgba(221, 216, 217, 0.747);
     font-family: 'Open Sans', sans-serif;
@@ -72,8 +77,13 @@ body {
     float: left;
     display: flex;
     justify-content: space-around;
-    /* background-color: #91cbed; */
+    background-color: #306fa8;
+    /* box-shadow: 0 1px 3px black; */
+    box-shadow: 2px 2px 2px #000;
+    z-index: 10;
+    /* border-radius: 3em 0.5em 0.5em 3em; */
 }
+
 
 
 .menu li {
@@ -87,9 +97,9 @@ body {
     /* padding: 5px 60px; */
 }
 
-.menu li:nth-child(1){
-    /* background-color: #91cbed; */
-}
+/* .menu li:nth-child(1){
+    background-color: #91cbed;
+} */
 
 .menu li a {
     color: rgb(255, 255, 255); 
@@ -102,9 +112,11 @@ body {
 
 .menu li a:hover {
     /* background: rgb(155, 122, 122); */
-    box-shadow: 2px 2px 2px #000;
+    /* box-shadow: 2px 2px 2px #000; */
+    /* box-shadow: 0 1px 3px black; */
     color: rgba(255, 255, 255, 0.644);
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    text-decoration-line: underline;
     font-size: 0.96em;
 }
 
@@ -157,18 +169,25 @@ ul.menu li ul li {
     grid-template-areas: 
         "main2 sidebar2";
 }
-.main {
-    background-color: rgb(165, 162, 134);
+
+section {
     grid-area: main2;
-    height: 72vh;
+    height: auto;
+    float: left;
+}
+
+article  {
+    background-color: rgb(165, 162, 134);
+    /* grid-area: main2; */
+    height: auto;
     float: left;
     margin: 5px;
 }
 
-.sidebar {
+aside {
     background-color: rgb(72, 228, 72);
     grid-area: sidebar2;
-    float: right;
+    /* float: right; */
     margin: 5px;
 }
 
@@ -183,4 +202,45 @@ ul.menu li ul li {
     height: auto;
     padding: 10px;
     border-top: 15px solid #000;
+}
+
+p {
+	text-align: justify;
+	margin: 0 0 15px;
+}
+
+h1,
+h2 {
+	font-family: 'Oleo Script', cursive;
+}
+
+h1 {
+	font-size: 70px;
+	line-height: 90px;
+}
+
+h2 {
+	font-size: 24px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+h3,
+h4 {
+	font-size: 14px;
+}
+
+h3 {
+	margin: 15px 0;
+}
+
+h4 {
+	margin: 10px 10px 5px;
+	font-style: italic;
+}
+
+h5 {
+	margin: 5px 10px 20px;
+	font-size: 12px;
+	line-height: 14px;
 }
