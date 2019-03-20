@@ -26,7 +26,8 @@ time, mark, audio, video {
 
 
 body {
-    background: rgba(221, 216, 217, 0.747);
+    background: rgba(221, 216, 217, 0.75);
+
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
@@ -36,7 +37,7 @@ body {
     grid-template-columns: 14vw 50px auto 23vw 14vw;
     grid-template-rows: auto;
     grid-template-areas: 
-        ". header header header ."
+        "lateral1 header header header lateral2"
         "nav nav nav nav nav"
         ". main main main ."
         "footer footer footer footer footer";
@@ -48,6 +49,17 @@ body {
     height: 130px;
     display: flex;
     align-items: center;
+    background-color: rgb(241, 235, 236);
+}
+
+.lateral1 {
+    grid-area: lateral1;
+    background-color: rgb(241, 235, 236);
+}
+
+.lateral2 {
+    grid-area: lateral2;
+    background-color: rgb(241, 235, 236);
 }
 
 .header .logo {
@@ -94,6 +106,7 @@ body {
     /* border: 1px solid #c0c0c0; */
     text-align: left;
     width: auto;
+    padding: 4px;
     /* padding: 5px 60px; */
 }
 
@@ -116,8 +129,9 @@ body {
     /* box-shadow: 0 1px 3px black; */
     color: rgba(255, 255, 255, 0.644);
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
     font-size: 0.96em;
+    transition: 150ms;
 }
 
 .menu li ul {
@@ -129,40 +143,44 @@ body {
     
 }
 
-.menu li:hover ul, .menu li.over ul {display: block;}
+.menu li:hover ul, .menu li.over ul {
+    display: block; 
+}
 
 ul.menu li ul li {
-    border: 1px solid #a29f9f;
+    border-bottom: 1px solid #a29f9f;
     display: block;
     /* width: 172.6px; */
     /* padding: 5px; */
     margin-left: 0; 
-    
+    align-content: center;
+ 
 }
 
 .menu ul li {
-    background: rgb(155, 122, 122);
+    background: #306fa8f5;
     width: 200px;
     height: 40px;
+
 }
 
 .menu ul li a {
     color: rgb(255, 255, 255); 
     text-decoration: none; 
-    padding: 0;
     width: 180px;
     display: block;
-    margin: auto;
-    top: 50%;
-    left: 50;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    padding: 10px 0 0 8px;
+    /* margin: auto; */
+    /* top: 50%; */
+    /* left: 50; */
+    /* margin-right: -50%; */
+    /* transform: translate(-50%, -50%); */
 }
 /* <-- Final de configureção de MENU DROPDOWN */
 
 .container2 {
     grid-area: main;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     display: grid;
     grid-template-columns: 1fr 25vw;
     grid-template-rows: auto;
@@ -177,7 +195,7 @@ section {
 }
 
 article  {
-    background-color: rgb(165, 162, 134);
+    background-color: #f5f5f5;
     /* grid-area: main2; */
     height: auto;
     float: left;
