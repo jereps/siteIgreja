@@ -84,6 +84,8 @@ body {
     grid-template-rows: 60px;
     grid-template-areas: 
         ". menu menu menu .";
+    position: sticky;
+    top: 0;
 }
 
 /* --> Inicio de configureção de MENU DROPDOWN  */
