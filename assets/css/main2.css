@@ -43,7 +43,7 @@ body {
     grid-template-columns: 14vw 50px auto 23vw 14vw;
     grid-template-rows: auto;
     grid-template-areas: 
-        "lateral1 header header header lateral2"
+        "header header header header header"
         "nav nav nav nav nav"
         ". main main main ."
         "footer footer footer footer footer";
@@ -51,14 +51,15 @@ body {
 }
 
 .header {
-    grid-area: header;
-    height: 130px;
-    display: flex;
+    grid-area: logo;
+    height: 60px;
+    /* //display: flex; */
     align-items: center;
-    background-color: rgb(241, 235, 236);
+    float: left;
+    /* background-color: rgb(241, 235, 236); */
 }
 
-.lateral1 {
+/* .lateral1 {
     grid-area: lateral1;
     background-color: rgb(241, 235, 236);
 }
@@ -66,28 +67,49 @@ body {
 .lateral2 {
     grid-area: lateral2;
     background-color: rgb(241, 235, 236);
+} */
+
+.header .logo {
+    /* margin: 0;
+    float: left; */
+    float: inline-end;
+    margin-right: -128px;
+}
+
+.header .logo img{
+    height: 60px;
+}
+
+
+/* barra de navegação */
+.nav {
+    background-color: rgb(48, 68, 73);
+    grid-area: header;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 14vw 50px auto 23vw 14vw;
+    grid-template-rows: 60px;
+    grid-template-areas: 
+        "logo menu menu menu .";
+    position: sticky;
+    top: 0;
+
+}
+
+/*.header {
+    grid-area: logo;
+    height: 130px;
+    // display: flex;
+   // align-items: initial;
+    float: left;
+    background-color: rgb(241, 235, 236);
 }
 
 .header .logo {
     margin: 0;
     float: left;
     
-}
-
-/* barra de navegação */
-.nav {
-    background-color: rgb(48, 68, 73);
-    grid-area: nav;
-    height: 60px;
-    display: grid;
-    grid-template-columns: 14vw 50px auto 23vw 14vw;
-    grid-template-rows: 60px;
-    grid-template-areas: 
-        ". menu menu menu .";
-    position: sticky;
-    top: 0;
-
-}
+} */
 
                             /* --> Inicio de configureção de MENU DROPDOWN  */
 
@@ -189,6 +211,15 @@ ul.menu li ul li {
 }
 
                         /* <-- Final de configureção de MENU DROPDOWN */
+
+
+.FotoGrande {
+    background-color: rgba(0, 0, 0, 0.616);
+    background-image: url(/assets/img/saojose.jpg);
+    background-repeat: no-repeat;
+    grid-area: nav;
+    height: 500px;
+}
 
 .container2 {
     grid-area: main;
