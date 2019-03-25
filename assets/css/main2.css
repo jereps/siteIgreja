@@ -43,37 +43,38 @@ body {
     grid-template-columns: 14vw 50px auto 23vw 14vw;
     grid-template-rows: auto;
     grid-template-areas: 
-        "header header header header header"
+        "lateralL header header header lateralR"
         "nav nav nav nav nav"
         ". main main main ."
         "footer footer footer footer footer";
-
 }
 
 .header {
-    grid-area: logo;
-    height: 60px;
-    /* //display: flex; */
+    grid-area: header;
+    height: 65px;
+    /* display: flex; */
     align-items: center;
     float: left;
-    /* background-color: rgb(241, 235, 236); */
+    background-color: rgb(241, 235, 236);
+    /* background-color: rgb(48, 68, 73); */
 }
 
-/* .lateral1 {
-    grid-area: lateral1;
+.lateral1 {
+    grid-area: lateralL;
     background-color: rgb(241, 235, 236);
+    /* background-color: rgb(48, 68, 73); */
 }
 
 .lateral2 {
-    grid-area: lateral2;
+    grid-area: lateralR;
     background-color: rgb(241, 235, 236);
-} */
+    /* background-color: rgb(48, 68, 73); */
+}
 
 .header .logo {
-    /* margin: 0;
-    float: left; */
-    float: inline-end;
-    margin-right: -128px;
+    margin: 0;
+    float: left;
+
 }
 
 .header .logo img{
@@ -84,7 +85,7 @@ body {
 /* barra de navegação */
 .nav {
     background-color: rgb(48, 68, 73);
-    grid-area: header;
+    grid-area: nav;
     height: 60px;
     display: grid;
     grid-template-columns: 14vw 50px auto 23vw 14vw;
@@ -93,23 +94,9 @@ body {
         "logo menu menu menu .";
     position: sticky;
     top: 0;
+    z-index: 11;
 
 }
-
-/*.header {
-    grid-area: logo;
-    height: 130px;
-    // display: flex;
-   // align-items: initial;
-    float: left;
-    background-color: rgb(241, 235, 236);
-}
-
-.header .logo {
-    margin: 0;
-    float: left;
-    
-} */
 
                             /* --> Inicio de configureção de MENU DROPDOWN  */
 
@@ -125,11 +112,9 @@ body {
     /* box-shadow: 0 1px 3px black; */
     box-shadow: 2px 2px 2px #000;
     z-index: 10;
-    /* border-radius: 3em 0.5em 0.5em 3em; */
+    border-radius: 12em 12em 79em 79em;
 
 }
-
-
 
 .menu li {
     position: relative;
@@ -142,10 +127,6 @@ body {
     padding: 4px;
     /* padding: 5px 60px; */
 }
-
-/* .menu li:nth-child(1){
-    background-color: #91cbed;
-} */
 
 .menu li a {
     color: rgb(255, 255, 255); 
@@ -203,22 +184,39 @@ ul.menu li ul li {
     width: 180px;
     display: block;
     padding: 10px 0 0 8px;
-    /* margin: auto; */
-    /* top: 50%; */
-    /* left: 50; */
-    /* margin-right: -50%; */
-    /* transform: translate(-50%, -50%); */
 }
 
                         /* <-- Final de configureção de MENU DROPDOWN */
 
 
 .FotoGrande {
-    background-color: rgba(0, 0, 0, 0.616);
-    background-image: url(/assets/img/saojose.jpg);
+    background-color: rgba(0, 0, 0, 0.52);
+    background-image: url(/assets/img/igreja10x+.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: color;
+    margin-top: 60px;
+    background-size: 99vw 580px;
     grid-area: nav;
-    height: 500px;
+    height: 600px;
+    color: rgb(233, 222, 201);
+}
+/* .FotoGrande img {
+    width: 100vw;
+    height: 600px;
+} */
+
+.FotoGrande h1 {
+    position: absolute;
+    top: 125px;
+    left: 30vw;
+}
+
+.FotoGrande h4 {
+    position: absolute;
+    top: 600px;
+    left: 43vw;
+    font-size: 3em;
 }
 
 .container2 {
