@@ -87,27 +87,36 @@ body {
     text-align: center;
 }
 
+.icons p{
+    position: relative;
+    float: left;
+    align-self: center;
+}
+
 .btn-social{
     display: inline-block;
     width: 35px;
     height: 35px;
     background: #306fa880;
-    margin: 5px;
+    margin: 0;
     border-radius: 50%;
     /* box-shadow: 8px 6px 7px -3px #0009; */
     box-shadow: 3px 5px 15px -4px #000000b3;
     color: #292121b3;
     overflow: hidden;
     position: relative;
+    transition: 0.2s linear;
 }
 
 .btn-social i{
     line-height: 36px;
     font-size: 25px;
+    transition: 0.2s linear;
 }
 
 .btn-social:hover i {
     transform: scale(1.2);
+    /* transform: rotateY(360deg); */
 }
 
 .btn-social:last-child{
@@ -116,18 +125,17 @@ body {
 
 .btn-social:hover {
     background-color: #fff;
-
-}
-
-.btn-social:hover:nth-child(1){
-    color: #3b5999;
 }
 
 .btn-social:hover:nth-child(2){
-    color: #cd201f;
+    color: #3b5999;
 }
 
 .btn-social:hover:nth-child(3){
+    color: #cd201f;
+}
+
+.btn-social:hover:nth-child(4){
     color: #e4405f;
 }
 
@@ -164,7 +172,6 @@ body {
     box-shadow: 0 15px 10px -10px rgb(0, 0, 0), 0 1px 4px rgb(0, 0, 0), 0 0 40px rgba(0, 0, 0, 0.3) inset;
     z-index: 10;
     border-radius: 12em 12em 79em 79em;
-
 }
 
 .menu li {
@@ -195,8 +202,8 @@ body {
     color: rgba(255, 255, 255, 0.644);
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
     /* text-decoration-line: underline; */
-    font-size: 0.96em;
-    transition: 150ms;
+    transform: scale(0.9);
+    transition: 0.2s linear;
 }
 
 .menu li ul {
@@ -242,7 +249,7 @@ ul.menu li ul li {
 
 .FotoGrande {
     background-color: rgba(0, 0, 0, 0.3);
-    background-image: url(/assets/img/igreja10x+.jpg);
+    background-image: url(/assets/img/igreja10x+Grande.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: color;
@@ -315,6 +322,8 @@ aside {
 .footer {
     background-color: #575454;
     grid-area: footer;
+    border-top: 15px solid #000;
+    display: inline-block;
 }
 
 .footer .copy {
@@ -322,8 +331,18 @@ aside {
     color: wheat;
     height: auto;
     padding: 10px;
-    border-top: 15px solid #000;
 }
+
+.endereco{
+    background-color: #646060;
+    width: 200px;
+    height: 200px;
+    font-size: 12px;
+    color: #f1f1f1;
+    text-align: justify;
+    line-height: 1.6;
+}
+
 
 section p {
 	text-align: justify;
