@@ -39,13 +39,13 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 14vw 50px auto 23vw 14vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "lateralL header header header lateralR"
-        "nav nav nav nav nav"
-        ". main main main ."
-        "footer footer footer footer footer";
+        "lateralL header header header header lateralR"
+        "nav nav nav nav nav nav"
+        ". main main main main sidebar"
+        "footer footer footer footer footer footer";
 }
 
 .header {
@@ -140,23 +140,23 @@ body {
 }
 
 
-/* barra de navegação */
+                 /* --------------------->   BARRA DE NAVEGAÇÃO  <--------------------- */
 .nav {
     background-color: rgb(48, 68, 73);
     grid-area: nav;
     height: 60px;
     display: grid;
-    grid-template-columns: 14vw 50px auto 23vw 14vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr minmax(313px,315px);
     grid-template-rows: 60px;
     grid-template-areas: 
-        "logo menu menu menu .";
+        ". menu menu menu menu .";
     position: sticky;
     top: 0;
     z-index: 11;
 
 }
 
-                            /* --> Inicio de configureção de MENU DROPDOWN  */
+                /* ----------------> INICIO DE CONFIGUREÇÃO DE MENU DROPDOWN <-------------- */
 
 .nav .menu {
     grid-area: menu;
@@ -244,7 +244,7 @@ ul.menu li ul li {
     padding: 10px 0 0 8px;
 }
 
-                        /* <-- Final de configureção de MENU DROPDOWN */
+                /* ------------------> FINAL DE CONFIGUREÇÃO DE MENU DROPDOWN <------------------ */
 
 
 .FotoGrande {
@@ -277,9 +277,9 @@ ul.menu li ul li {
     font-size: 3em;
 }
 
-.container2 {
+/* .container2 {
     grid-area: main;
-    /* background-color: #f5f5f5; */
+    background-color: #f5f5f5;
     display: grid;
     grid-template-columns: 1fr 20vw;
     grid-template-rows: auto;
@@ -287,12 +287,21 @@ ul.menu li ul li {
         "main2 sidebar2";
     max-width: 1024px;
     justify-self: center;
+} */
+
+.main {
+    grid-area: main;
+    max-width: 1200px;
+    justify-self: center;
 }
 
 section {
-    grid-area: main2;
+    
     height: auto;
-    float: left;
+    
+    /* justify-self: center; */
+    /* float: left; */
+
 }
 
 article  {
@@ -304,20 +313,23 @@ article  {
 }
 
 aside {
-    /* background-color: rgb(72, 228, 72); */
-    background-color: floralwhite;
-    /* box-shadow: 0 1px 3px black; */
-    grid-area: sidebar2;
-    /* float: right; */
-    margin: 5px;
-    max-width: 242px;
-    min-width: 240px;
+    grid-area: sidebar;
+    display: flex;
+    justify-self: flex-end;
+    margin: 10px;
     max-height: 708px;
+    /* background-color: rgb(72, 228, 72); */
+    /* background-color: floralwhite; */
+    box-shadow: 0 1px 3px black;
+    /* grid-area: sidebar2; */
+    /* float: right; */
+    /* max-width: 242px; */
+    /* min-width: 240px; */
 }
 
-.fb-page{
+/* .fb-page{
     box-shadow: 0 1px 3px black;
-}
+} */
 
 .footer {
     background-color: #575454;
