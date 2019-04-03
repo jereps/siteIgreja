@@ -296,7 +296,7 @@ section {
 }
 
 article  {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     /* grid-area: main2; */
     height: auto;
     float: left;
@@ -345,7 +345,7 @@ aside {
 
 
 section p {
-	text-align: justify;
+	text-align: left;
     margin: 10px 15px 15px;
     /* margin: 0 0 15px; */
 }
