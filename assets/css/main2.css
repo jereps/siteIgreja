@@ -230,7 +230,7 @@ ul.menu li ul li {
 /* ------------------> FINAL DE CONFIGUREÇÃO DE MENU DROPDOWN <------------------ */
 
 .FotoGrande {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   background-image: url(/assets/img/igreja10x+Grande.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -241,10 +241,6 @@ ul.menu li ul li {
   height: 600px;
   color: rgb(233, 222, 201);
 }
-/* .FotoGrande img {
-    width: 100vw;
-    height: 600px;
-} */
 
 .FotoGrande h1 {
   position: absolute;
@@ -278,16 +274,18 @@ ul.menu li ul li {
   height: auto;
   padding-top: 50px;
   padding-bottom: 70px;
+
 }
 
 .title {
-font-size: 23px;
-color: #383837d8;
-font-weight: 400;
-margin-top: 0;
-margin-bottom: 40px;
-font-family: "Open Sans", sans-serif;
-text-align: center;
+  font-size: 23px;
+  color: #383837d8;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  text-shadow: 1px 2px #aaa4a4;
 }
 
 .article-main {
@@ -298,8 +296,55 @@ text-align: center;
   float: left;
   margin: 2px 0;
   padding: 0 10px 22px 10px;
+  transition: .5s;
+  position: relative;
 }
 
+/* INICIO Utilizando GRID LAYOUT */
+/* .article-main:nth-child(2){
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 3;
+}
+
+.article-main:nth-child(3){
+  grid-column: 3 / 4;
+  grid-row: 2 / span 3;
+}
+
+.article-main:nth-child(4){
+  grid-column: 4 / 5;
+  grid-row: 2 / span 3;
+}
+
+.article-main:nth-child(5){
+  grid-column: 1 / 2;
+  grid-row: 5 / span 2;
+}
+
+.article-main:nth-child(6){
+  grid-column: 2 / 3;
+  grid-row: 5 / span 2;
+}
+
+.article-main:nth-child(7){
+  grid-column: 3 / span  2;
+  grid-row: 4 / span 3;
+}
+
+.article-main:nth-child(8){
+  grid-column: 3 /  2;
+}
+
+.article-main:nth-child(3) img, .article-main:nth-child(4) img {
+  height: 285px;
+}
+
+.article-main:nth-child(5) img, .article-main:nth-child(6) img {
+  height: 285px;
+} */
+/* Fim Utilizando GRID LAYOUT */
+
+/* INICIO SEM GRADY LAYOUT */
 .article-main:nth-child(3), .article-main:nth-child(4) {
   width: 24%;
 }
@@ -322,12 +367,32 @@ height: 250px;
 .article-main:nth-child(8) img{
     height: 280px;
 }
+/* FIM SEM GRADY LAYOUT */
 
 .main img {
   width: 100%;
   object-fit: cover;
   height: 400px;
+  box-shadow: 4px 4px 3px 1px #787474;
+  transition: .3s;
+}
 
+.caption {
+  text-align: center;
+  background: #0006;
+  color: #fff;
+  position: absolute;
+  width: 96.9%;
+  bottom: 16px;
+  height: 50px;
+}
+
+.article-main:nth-child(even):hover {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.article-main:nth-child(odd):hover {
+  transform: scale(1.1) rotate(-4deg);
 }
 
 @media (max-width: 600px) {
@@ -346,6 +411,9 @@ height: 250px;
     display: grid;
     grid-template-columns: auto 1fr 1fr 1fr 1fr auto;
   }
+  .nav .menu {
+    display: none;
+  }
 
   .aside {
     display: none;
@@ -359,6 +427,30 @@ height: 250px;
     margin: 0;
     padding: 0 10px 20px 10px;
   }
+
+  .main img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    box-shadow: 4px 4px 3px 1px #787474;
+  
+  }
+
+  .article-main:nth-child(3), .article-main:nth-child(4),
+  .article-main:nth-child(5), .article-main:nth-child(6)  {
+    width: 100%;
+  }
+  
+  .article-main:nth-child(3) img, .article-main:nth-child(4) img,
+  .article-main:nth-child(5) img, .article-main:nth-child(6) img,
+  .article-main:nth-child(8) img {
+    height: 300px;
+  }
+  
+  .article-main:nth-child(7) img{
+      margin-top: 0px;
+  }
+
 }
 
 aside {
@@ -410,10 +502,10 @@ section p {
   /* margin: 0 0 15px; */
 }
 
-h1,
+/* h1,
 h2 {
   font-family: "Oleo Script", cursive;
-}
+} */
 
 h1 {
   font-size: 70px;
