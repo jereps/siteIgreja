@@ -14,7 +14,7 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400,700");
 
 body {
-  background: rgba(221, 216, 217, 0.75);
+  background: rgba(221, 216, 217, 0.90);
   background-image: url(/assets/img/FacesCom.jpg);
 
   background-size: 900px 1200px;
@@ -25,6 +25,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
+
 
 .container {
   display: grid;
@@ -415,11 +416,6 @@ height: 250px;
     display: none;
   }
 
-  .aside {
-    display: none;
-    box-shadow: 0 1px 3px rgb(72, 228, 72);
-  }
-
   .article-main {
     width: 100%;
     height: auto;
@@ -453,24 +449,21 @@ height: 250px;
 
 }
 
-aside {
+.aside {
   grid-area: sidebar;
   display: flex;
   justify-self: flex-end;
-  margin: 10px;
+  margin: 116px 10px 10px;
   max-height: 708px;
   background-color: rgb(72, 228, 72);
   /* background-color: floralwhite; */
   box-shadow: 0 1px 3px black;
+  width: 65%;
   /* grid-area: sidebar2; */
   /* float: right; */
   /* max-width: 242px; */
   /* min-width: 240px; */
 }
-
-/* .fb-page{
-    box-shadow: 0 1px 3px black;
-} */
 
 .footer {
   background-color: #575454;
