@@ -257,6 +257,7 @@ body {
   transition: 0.2s linear;
 }
 
+
 .menu li ul {
   position: absolute;
   /* top: 60px; */
@@ -301,6 +302,7 @@ ul.menu li ul li {
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: color;
+  object-fit: cover;
   margin-top: 60px;
   background-size: 99vw 580px;
   grid-area: nav;
@@ -482,10 +484,33 @@ height: 250px;
   display: grid;
   background-color: #293039;
   border-top: 15px solid #212a36;
-  grid: minmax(200px, 200px) / repeat(4,1fr);
+  grid: minmax(225px, 225px) / repeat(6,1fr);
   grid-template-areas: 
-  "address address address address"
-  "botton botton botton botton"
+  ". siteMap siteMap siteMap address ."
+  "botton botton botton botton botton botton";
+  color: #fff;
+}
+
+.siteMap {
+  grid-area: siteMap;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.siteMap ul {
+  list-style: none;
+  line-height: 1rem;
+  wrap
+}
+
+.siteMap a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer .logo {
+  margin-top: -16px;
 }
 
 .copySocial {
@@ -501,13 +526,10 @@ height: 250px;
 }
 
 .endereco {
-  grid-column: 3 /4;
-  /* background-color: #646060; */
+  grid-column: address;
   width: 283px;
-  /* height: 200px; */
   font-size: 12px;
   color: #f1f1f1;
-  /* text-align: center; */
   line-height: 1.8;
   justify-self: end;
   align-self: center;
@@ -516,13 +538,7 @@ height: 250px;
 section p {
   text-align: left;
   margin: 10px 15px 15px;
-  /* margin: 0 0 15px; */
 }
-
-/* h1,
-h2 {
-  font-family: "Oleo Script", cursive;
-} */
 
 h1 {
   font-size: 70px;
@@ -619,6 +635,23 @@ h5 {
   
   .article-main:nth-child(7) img{
       margin-top: 0px;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "address"
+      "siteMap"
+      "botton";
+  }
+
+  .endereco {
+  justify-self: center;
+  }
+
+  .siteMap{
+
   }
 
 }
