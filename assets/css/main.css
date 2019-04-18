@@ -315,19 +315,22 @@ ul.menu li ul li {
   grid-area: nav;
   height: 600px;
   color: rgb(233, 222, 201);
+  display: flex;
+  justify-content: center;
 }
 
 .FotoGrande h1 {
   position: absolute;
   top: 125px;
-  left: 30vw;
+  /* left: 30vw; */
+  font-size: calc(3em + 1.42vw);
 }
 
 .FotoGrande h4 {
   position: absolute;
-  top: 600px;
-  left: 43vw;
-  font-size: 3em;
+  top: 614px;
+  /* left: 43vw; */
+  font-size: calc(2em + 1.3vw);
 }
 
 /* .container2 {
@@ -457,8 +460,8 @@ height: 250px;
   background: #0006;
   color: #fff;
   position: absolute;
-  width: 96.9%;
-  bottom: 16px;
+  width: 96.4%;
+  bottom: 14px;
   height: 50px;
 }
 
@@ -662,6 +665,13 @@ h5 {
 
   .endereco {
   justify-self: center;
+  }
+
+  .siteMap {
+    display: initial;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-top: solid 1px #ffca37b3;
   }
 
 }
