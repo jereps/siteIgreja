@@ -316,7 +316,18 @@ ul.menu li ul li {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  transition: box-shadow .5s ease-in-out;
+}
+
+.navmobile:hover {
+  box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
+}
+
+#menu-mobile:checked ~ label .navmobile {
+  box-shadow: 0 0 0 130vw #fff, 0 0 0 130vh #fff;
 }
 
 .hamburguer {
