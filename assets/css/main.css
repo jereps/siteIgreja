@@ -309,9 +309,9 @@ ul.menu li ul li {
 
 .menumobile {
   display: none;
-}
+} 
 
-.navmobile {
+.icon-mobile {
   background: #fff;
   width: 45px;
   height: 45px;
@@ -319,15 +319,35 @@ ul.menu li ul li {
   margin-right: 8px;
   cursor: pointer;
   box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
-  transition: box-shadow .5s ease-in-out;
+  /* transition: box-shadow .5s ease-in-out; */
+  transition: box-shadow 1.1s cubic-bezier(.19,1,.22,1);
 }
 
-.navmobile:hover {
+.icon-mobile:hover {
   box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
 }
 
-#menu-mobile:checked ~ label .navmobile {
-  box-shadow: 0 0 0 130vw #fff, 0 0 0 130vh #fff;
+#menu-mobile:checked ~ label .icon-mobile {
+  box-shadow: 0 0 0 200vw rgba(48, 111, 168, 0.4), 0 0 0 130vh rgba(48, 111, 168,.92);
+  
+}
+
+.nav-mobile {
+  /* display: none; */
+  position: fixed;
+  color: rgba(200, 196, 230, 0.863);
+  text-transform: uppercase;
+  line-height: 10px;
+  top: 6%;
+  width: 100vw;
+  height: 100vh;
+  left: -100%;
+  padding-left: 11%;
+  transition: .25s .1s cubic-bezier(0, 1.07,0,1.02);
+}
+
+#menu-mobile:checked ~ .nav-mobile {
+  left: 0;
 }
 
 .hamburguer {
@@ -587,22 +607,38 @@ height: 250px;
   justify-content: space-between;
 }
 
+.nav-mobile ul,
 .siteMap ul {
   list-style: none;
   line-height: 1.4em;
 }
 
-.siteMap a {
-  color: #fff;
-  text-decoration: underline;
+.nav-mobile ul li,
+.siteMap ul li{
+  transform: scale(.95);
+  line-height: 23px;
 }
 
+.nav-mobile h3 a,
+.siteMap h3 a{
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.nav-mobile a,
+.siteMap a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-mobile a:hover,
 .siteMap a:hover {
   color: rgba(255, 255, 255, 0.644);
   text-shadow: 0px 0px 5px rgb(255, 255, 255);
   /* text-decoration-line: underline; */
   transform: scale(0.8);
   transition: 0.2s linear;
+  text-decoration: underline;
 }
 
 .footer .logo {
