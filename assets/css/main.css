@@ -593,18 +593,26 @@ height: 250px;
   display: grid;
   background-color: #293039;
   border-top: 15px solid #212a36;
-  grid: minmax(225px, 225px) / repeat(6,1fr);
+  grid: auto / repeat(6,1fr);
   grid-template-areas: 
-  ". siteMap siteMap siteMap address ."
+  "siteMap siteMap siteMap siteMap siteMap address"
   "botton botton botton botton botton botton";
   color: #fff;
 }
+
 
 .siteMap {
   grid-area: siteMap;
   text-transform: uppercase;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  color: rgba(200, 196, 230, 0.863);
+}
+
+.nav-mobile a::before,
+.siteMap a::before {
+  content: " ";
+  border-left: solid 3px brown;
 }
 
 .nav-mobile ul,
