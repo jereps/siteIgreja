@@ -233,7 +233,7 @@ body {
   grid-area: nav;
   height: 60px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr minmax(313px, 315px);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 60px;
   grid-template-areas: ". menu menu menu menu .";
   position: sticky;
@@ -607,7 +607,7 @@ height: 250px;
   background-color: rgb(72, 228, 72);
   /* background-color: floralwhite; */
   box-shadow: 0 1px 3px black;
-  width: 65%;
+  width: auto;
   /* grid-area: sidebar2; */
   /* float: right; */
   /* max-width: 242px; */
@@ -843,4 +843,8 @@ h5 {
     border-top: solid 1px #ffca37b3;
   }
 
+}
+
+body > div:nth-child(7) {
+  display: none;
 }
