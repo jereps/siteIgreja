@@ -827,7 +827,8 @@ h5 {
   }
 
   .endereco {
-  justify-self: center;
+    justify-self: center;
+    margin: 20px;
   }
 
   .siteMap {
@@ -837,10 +838,6 @@ h5 {
     border-top: solid 1px #ffca37b3;
   }
 
-}
-
-body > div:nth-child(7) {
-  display: none;
 }
 
 /* @media (min-width: 601px) and (max-width: 1024px) {
@@ -1010,13 +1007,18 @@ body > div:nth-child(7) {
   .siteMap {
     display: flex;
     flex-wrap: wrap;
-    max-width: 523px;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    max-width: 490px;
+    /* margin-left: 10vw; */
+    /* margin-right: 10vw; */
     border-top: solid 1px #ffca37b3;
     justify-self: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
   }
 
+}
+
+
+body > div:nth-child(7) {
+  display: none;
 }
