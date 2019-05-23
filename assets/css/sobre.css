@@ -14,6 +14,8 @@ body {
 .cremos {
   text-align: left;
   line-height: 26px;
+  margin-left: 12px;
+  margin-right: 6px;
 }
 
 .cremos h2 {
