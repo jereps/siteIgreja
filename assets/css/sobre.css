@@ -1,0 +1,34 @@
+body {
+  background: rgba(221, 216, 217, 0.4);
+  background-image: url(/assets/img/FacesCom.jpg);
+
+  background-size: 900px 1200px;
+  background-attachment: fixed;
+  /* background-position-y: 190px; */
+  /* background-repeat: repeat-x; */
+  background-blend-mode: screen;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.cremos {
+  text-align: left;
+  line-height: 26px;
+}
+
+.cremos h2 {
+  font-size: 23px;
+  margin-bottom: 10px;
+  color: #50504c;
+  font-weight: 500;
+}
+
+.cremos p {
+  font-size: 16px;
+  color: #565656;
+  margin: 0;
+  /* margin: 10px 15px 15px; */
+  margin-bottom: 30px;
+  font-weight: 400;
+  line-height: 28px;
+}
