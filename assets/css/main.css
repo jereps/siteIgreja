@@ -739,6 +739,7 @@ h5 {
       "header"
       "nav"
       "main"
+      "sidebar"
       "footer";
   }
 
@@ -762,13 +763,19 @@ h5 {
   }
 
   .aside {
-    display: none;
+    /* display: none; */
     grid-area: sidebar;
-    position: absolute;
-    top: -10000px;
+    /* position: absolute; */
+    /* top: -10000px;
     min-width: 180px;
-    max-width: 260px;
+    max-width: 260px; */
   }
+
+
+
+    .aside .fb1 {
+      display: none;
+    }
 
   .nav {
     display: grid;
