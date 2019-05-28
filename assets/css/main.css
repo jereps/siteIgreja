@@ -607,6 +607,10 @@ ul.menu li ul li {
   max-width: 260px;
 }
 
+.aside .fb2{
+  display: none;
+}
+
 .footer {
   grid-area: footer;
   display: grid;
@@ -763,19 +767,34 @@ h5 {
   }
 
   .aside {
-    /* display: none; */
     grid-area: sidebar;
-    /* position: absolute; */
-    /* top: -10000px;
-    min-width: 180px;
-    max-width: 260px; */
+    /* display: flex; */
+    /* justify-self: center; */
+    display: grid;
+    justify-self: stretch;
+    margin: 0 0px 20px;
+    max-height: 135px;
+    /* background-color: rgba(72, 228, 72, 0.822);
+    box-shadow: 0 1px 3px rgb(0, 0, 0); */
+    background-color: transparent;
+    box-shadow: none;
+    min-width: auto;
+    max-width: 600px;
+    justify-content: center;
+    /* margin-bottom: 43px; */
   }
 
 
 
-    .aside .fb1 {
-      display: none;
-    }
+  .aside .fb1 {
+    display: none;
+  }
+
+  .aside .fb2 {
+    width: auto;
+    display: initial;
+    box-shadow: 0 1px 3px black;
+  }
 
   .nav {
     display: grid;
@@ -991,6 +1010,10 @@ h5 {
   .aside {
     min-width: 180px;
     max-width: 260px;
+  }
+
+  .aside .fb2{
+    display: none;
   }
 /*   
   .fb-page, .fb_iframe_widget {
