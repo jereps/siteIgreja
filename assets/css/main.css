@@ -14,6 +14,9 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
 
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400,700");
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap');
+
+
 body {
   background: rgba(221, 216, 217, 0.90);
   background-image: url(/assets/img/FacesCom.jpg);
@@ -23,7 +26,8 @@ body {
   /* background-position-y: 190px; */
   /* background-repeat: repeat-x; */
   background-blend-mode: screen;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
 

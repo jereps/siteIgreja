@@ -6,7 +6,7 @@ body {
   /* background-position-y: 190px; */
   /* background-repeat: repeat-x; */
   background-blend-mode: screen;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
 
@@ -20,16 +20,25 @@ body {
 .cremos h2 {
   font-size: 23px;
   margin-bottom: 10px;
-  color: #50504c;
+  color: #655e5e;
   font-weight: 500;
+  margin-left: 5px;
 }
 
 .cremos p {
-  font-size: 16px;
+  /* font-size: 16px;
   color: #565656;
   margin: 0;
-  /* margin: 10px 15px 15px; */
+  // margin: 10px 15px 15px;
   margin-bottom: 30px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 28px; */
+
+
+  margin: 10px 10px 15px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 200%;
+  color: #777777;
+  margin-bottom: 25px;
 }
