@@ -96,7 +96,7 @@ body {
   float: left;
 }
 
-.header .logo img {
+.logo img {
   height: 60px;
 }
 
@@ -248,7 +248,7 @@ body {
 
 /* ----------------> INICIO DE CONFIGUREÇÃO DE MENU DROPDOWN <-------------- */
 
-.nav .menu {
+.menu {
   grid-area: menu;
   list-style: none;
   /* border: 2px solid #c0c0c0; */
@@ -676,7 +676,7 @@ ul.menu li ul li {
   text-decoration: underline;
 }
 
-.footer .logo {
+.logo {
   margin-top: -16px;
 }
 
@@ -685,7 +685,7 @@ ul.menu li ul li {
   background-color: #21262e;
 }
 
-.footer .copy {
+.copy {
   text-align: center;
   color: wheat;
   height: auto;
@@ -760,7 +760,7 @@ h5 {
     top: 0;
   }
 
-  .header .logo img {
+  .logo img {
     margin-left: 5px;
     height: 55px;
 
@@ -869,97 +869,6 @@ h5 {
   }
 
 }
-
-/* @media (min-width: 601px) and (max-width: 1024px) {
-
-  .container {
-    display: grid;
-    grid-template-columns: auto repeat(3,1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      "lateralL header header lateralR"
-      "nav nav nav nav"
-      "social main main main"
-      "footer footer footer footer";
-  }
-
-  .article-main {
-    width: 60%;
-    height: auto;
-    float: left;
-    margin: 0;
-    padding: 0 10px 20px 10px;
-  }
-
-  .main img {
-    width: 100%;
-    object-fit: cover;
-    height: 300px;
-    box-shadow: 4px 4px 3px 1px #787474;
-  
-  }
-
-  .article-main:nth-child(3),.article-main:nth-child(4),
-  .article-main:nth-child(7){
-    width: 35%;
-  }
-
-  .article-main:nth-child(5), .article-main:nth-child(6){
-    width: 60%;
-  }
-
-
-  
-  .article-main:nth-child(3) img, .article-main:nth-child(4) img,
-  .article-main:nth-child(5) img, .article-main:nth-child(6) img,
-  .article-main:nth-child(8) img {
-    height: 300px;
-  }
-  
-  .article-main:nth-child(7) img{
-      margin-top: 0px;
-  }
-  
-  .aside {
-    display: none;
-    grid-area: footer;
-    position: absolute;
-    top: -10000px;
-    width: 0px;
-    height: 0px;
-  }
-  
-  .fb-page, .fb_iframe_widget {
-    display: none;
-  }
-  
-  .footer {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas:
-      "address"
-      "siteMap"
-      "botton";
-  }
-
-  .endereco {
-    justify-self: center;
-    margin: 20px;
-  }
-  
-  .siteMap {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 523px;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    border-top: solid 1px #ffca37b3;
-    justify-self: center;
-    justify-content: space-evenly;
-
-  }
-
-} */
 
 @media (min-width: 601px) and (max-width: 1024px) {
 
