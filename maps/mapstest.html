@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      INSEJEC - Igreja Nacional do Senhor Jesus Cristo - São José Dos Campos
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/mapa.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+    <!-- import css do leaflet maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" crossorigin=""/>
+    <!-- import javascript -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" crossorigin=""></script>
+    <!-- <script src="/assets/js/main.js"></script> -->
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2"></script>
+
+    <header id="header" role="banner"></header>
+
+
+    <div class="container">
+      <div class="lateral1"></div>
+
+      <div class="header">
+        <section class="logo">
+          <img class="img" src="../assets/img/logo-insejec.png" />
+        </section>
+
+        <input id="menu-mobile" type="checkbox">
+
+        <label for="menu-mobile" class="menumobile">
+          <div class="icon-mobile">
+            <span class="hamburguer"></span>
+          </div>
+        </label>
+
+        <nav class="nav-mobile">
+          <h3> <a href="../index.html">home</a> </h3>
+          <h3> <a href="#">Ensino</a> </h3>
+          <h3> <a href="#">Médias</a> </h3>
+          <h3> <a href="#">Projetos</a> </h3>
+          <h3> <a href="https://www.palavradafe.com.br/" target="_blank">produtos</a> </h3>
+          <h3> <a href="#">contato</a> </h3>
+           
+          <ul>
+            <h3>pastores</h3>
+            <li> <a href="../pastores/rosivaldo.html">Rosivaldo</a> </li>
+            <li> <a href="#">Priscila</a> </li>
+          </ul>
+          
+          <ul>
+            <h3>Sobre</h3>
+            <li> <a href="#">decretos</a> </li>
+            <li> <a href="#">liderenças</a> </li>
+            <li> <a href="#">Quem somos</a> </li>
+            <li> <a href="#">visão celular</a> </li>
+            <li> <a href="#">nossa história</a> </li>
+            <li> <a href="../sobre/emquecremos.html">em que cremos</a> </li>
+            <li> <a href="#">nossos valores</a> </li>
+            <li> <a href="#">insejecs no mundo</a> </li>
+            <li> <a href="#">visão de compromisso</a> </li>
+          </ul>
+      </nav>
+
+        <!-- <section class="social">
+          
+          <div class="icons">
+              <p>Siga-nos!</p>
+            <a class="btn-social" href="https://www.facebook.com/insejecsjcampos" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn-social" href="#"><i class="fab fa-youtube"></i></a>
+            <a class="btn-social" href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </section> -->
+      </div>
+
+      <div class="lateral2"></div>
+
+      <nav class="nav">
+        <ul class="menu">
+          <li> <a href="../index.html">Home</a> </li>
+          <li>
+            <a href="#">Sobre</a>
+            <ul>
+              <li> <a href="#">decretos</a> </li>
+              <li> <a href="#">liderenças</a> </li>
+              <li> <a href="#">Quem somos</a> </li>
+              <li> <a href="#">visão celular</a> </li>
+              <li> <a href="#">nossa história</a> </li>
+              <li> <a href="../sobre/emquecremos.html">em que cremos</a> </li>
+              <li> <a href="#">nossos valores</a> </li>
+              <li> <a href="#">insejecs no mundo</a> </li>
+              <li> <a href="#">visão de compromisso</a> </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Pastores</a>
+            <ul>
+              <li> <a href="../pastores/rosivaldo.html">Rosivaldo</a> </li>
+              <li> <a href="#">Priscila</a> </li>
+              <!-- <li><a href="#"></a></li> -->
+            </ul>
+          </li>
+          <li> <a href="#">Mídias</a> </li>
+          <li> <a href="#">projetos</a> </li>
+          <li>
+            <a href="https://www.palavradafe.com.br/" target="_blank"> produtos </a>
+          </li>
+          <li> <a href="#">ensino</a> </li>
+          <li> <a href="#">contato</a> </li>
+        </ul>
+      </nav>
+
+      <div class="FotoGrande">
+        <h1>BEM-VINDO!</h1>
+        <h4>A FAMÍLIA DE DEUS</h4>
+      </div>
+
+      <section class="social">
+        <div class="icons">
+          <!-- <p>Siga-nos!</p>  -->
+          <ul>
+            <li title="Facebook">
+              <a class="btn-social" href="https://www.facebook.com/insejecsjcampos" target="_blank">
+                <i class="fab fa-facebook-f"></i> </a>
+            </li>
+
+            <li title="YouTube">
+              <a class="btn-social" href="#"> <i class="fab fa-youtube"></i> </a>
+            </li>
+
+            <li title="Instagram">
+              <a class="btn-social" href="#"> <i class="fab fa-instagram"></i> </a>
+            </li>
+
+            <li title="Flickr">
+              <a class="btn-social" href="#"> <i class="fab fa-flickr"></i> </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- <div class="container2"> -->
+      <section class="main">
+
+        <div id='mapDIV'></div>
+
+        <!-- <h2 class="title">UM TÍTULO PARA A SECTION</h2>
+
+        <article class="article-main">
+          <a href="#">
+            <img src="https://source.unsplash.com/random/702x360" />
+            <h2 class="caption">Caption</h2>
+          </a>
+        </article> -->
+
+      </section>
+
+      <aside class="aside">
+        <div class="fb1">
+        <div
+          class="fb-page"
+          data-href="https://www.facebook.com/insejecsjcampos"
+          data-tabs="timeline,events,messages"
+          data-height="700"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true"
+         > 
+          <blockquote cite="https://www.facebook.com/insejecsjcampos" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/insejecsjcampos"> 
+              Igreja Nacional do Senhor Jesus Cristo em São José dos Campos
+            </a>
+
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="fb2">
+          <div class="fb-page" data-href="https://www.facebook.com/insejecsjcampos" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/insejecsjcampos" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/insejecsjcampos">Igreja Nacional do Senhor Jesus Cristo em São José dos Campos</a></blockquote></div>
+      </div>
+      </aside>
+      <!-- </div> //container 2-->
+
+      <footer class="footer">
+        <nav class="siteMap">
+          <h3> <a href="../index.html">home</a> </h3>
+          <h3> <a href="#">Ensino</a> </h3>
+          <h3> <a href="#">Médias</a> </h3>
+          <h3> <a href="#">Projetos</a> </h3>
+          <h3> <a href="https://www.palavradafe.com.br/" target="_blank">produtos</a> </h3>
+          <h3> <a href="#">contato</a> </h3>
+          
+          <ul>
+            <h3>pastores</h3>
+            <li> <a href="../pastores/rosivaldo.html">Rosivaldo</a> </li>
+            <li> <a href="#">Priscila</a> </li>
+          </ul>
+
+          <ul>
+            <h3>Sobre</h3>
+            <li> <a href="#">decretos</a> </li>
+            <li> <a href="#">liderenças</a> </li>
+            <li> <a href="#">Quem somos</a> </li>
+            <li> <a href="#">visão celular</a> </li>
+            <li> <a href="#">nossa história</a> </li>
+            <li> <a href="../sobre/emquecremos.html">em que cremos</a> </li>
+            <li> <a href="#">nossos valores</a> </li>
+            <li> <a href="#">insejecs no mundo</a> </li>
+            <li> <a href="#">visão de compromisso</a> </li>
+          </ul>
+
+        </nav>
+
+        <div class="endereco">
+          <section class="logo">
+            <!-- <img src="http://placehold.it/60x60/09f/fff.png" alt=""> -->
+            <img src="../assets/img/logo-insejec.png" alt="logo" />
+          </section>
+          <address>
+            <!-- <p><strong> IGREJA NACIONAL DO SENHOR JESUS CRISTO </strong></p> -->
+            <p> <strong>São José Dos Campos</strong> </p>
+            <p>
+              Rua Fernando Costa, 182 Jardim Esplanada II<br>
+              CEP: 12.242-570 Telefone: (12) 3302.6442
+              <br> Cultos: <br> Sexta-Feira: 20h e Domingos: 10h
+            </p>
+          </address>
+        </div>
+
+        <div class="copySocial">
+          <section class="social-footer">
+            <div class="icons-footer">
+              <!-- <p>Siga-nos!</p>  -->
+              <ul>
+                <li title="Facebook">
+                  <a class="btn-social-footer" href="https://www.facebook.com/insejecsjcampos"target="_blank"> 
+                    <i class="fab fa-facebook-f"></i> </a>
+                </li>
+
+                <li title="YouTube">
+                  <a class="btn-social-footer" href="#"> <i class="fab fa-youtube"></i> </a>
+                </li>
+                <li title="Instagram">
+                  <a class="btn-social-footer" href="#"> <i class="fab fa-instagram"></i> </a>
+                </li>
+                <li title="Flickr">
+                  <a class="btn-social-footer" href="#"> <i class="fab fa-flickr"></i> </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <p class="copy">&copy; INSEJEC 2019 - Todos os direitos reservados</p>
+        </div>
+      </footer>
+
+      <div> <a class="btn-topo" href="#header"> <i class="fas fa-angle-up"></i> </a> </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
