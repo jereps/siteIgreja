@@ -56,6 +56,11 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
+googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+
 
 var map = L.map(document.getElementById('mapDIV'), {
     center: [-23.210362, -45.896853],
@@ -84,7 +89,8 @@ var baseLayers = {
     "Thunderforest": thunderforest,
     "MapQuest": mapquest,
     "Migurski": migurski,
-    "Esri_WorldImagery": Esri_WorldImagery
+    "Esri_WorldImagery": Esri_WorldImagery,
+    "googleHybrid": googleHybrid
 };
 
 // var overlays = {
