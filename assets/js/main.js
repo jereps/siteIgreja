@@ -41,68 +41,40 @@ Object.keys(breakpoints).forEach(function (breakpoint) {
 // L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(cities),
 // L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(cities);
 
-var basemap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {});
+var osmAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
 
-var basetopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/WMTS/tile/1.0.0/USGSTopo/default/default028mm/{z}/{y}/{x}.png', {});
+var googleAttr = 'Dados Cartográficos &copy;2019 Google' +
+        '<a style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);" href="https://www.google.com/intl/pt-BR_US/help/terms_maps.html" target="_blank" rel="noopener">Termos de Uso</a>';
 
 var baserelief = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', {});
 
-var osm = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {});
-var opencyclemap = L.tileLayer('http://tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {});
-var thunderforest = L.tileLayer('http://a.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {});
-var mapquest = L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg', {});
-var migurski = L.tileLayer('http://tile.stamen.com/terrain-background/{z}/{x}/{y}.jpg', {});
-var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-});
+var osm = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: osmAttr});
+
 
 googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
     maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
+    subdomains:['mt0','mt1','mt2','mt3'],
+    attribution: googleAttr
 });
 
 
 var map = L.map(document.getElementById('mapDIV'), {
     center: [-23.210362, -45.896853],
     zoom: 12,
-    layers: [mapquest]
+    layers: [osm]
 });
 
-// basemap.addTo(map);
-// baserelief.addTo(map);
-
-// var thetrail = L.geoJSON(trail, {
-//     color: '#800000',
-//     weight: 3,
-//     dashArray: '12 8 12',
-// });
-
-// thetrail.bindTooltip("The Valdez-Eagle Trail")
-// thetrail.addTo(map);
 
 var baseLayers = {
-    "OSM": osm,
-    "Basemap": basemap,
-    "Shared Relief": basetopo,
-    "National Map topo": baserelief,
-    "OpenCycleMap": opencyclemap,
-    "Thunderforest": thunderforest,
-    "MapQuest": mapquest,
-    "Migurski": migurski,
-    "Esri_WorldImagery": Esri_WorldImagery,
-    "googleHybrid": googleHybrid
+    "Streets": osm,
+    "Satélite": googleHybrid
+
 };
 
-// var overlays = {
-//     "Cities": cities
-// };
-
-// var overlays = {
-//     "The Trail": thetrail
-// };
 
 var overlays = {
-    "base": baserelief
+    "Células": baserelief
 }
 
 L.control.layers(baseLayers, overlays).addTo(map);
