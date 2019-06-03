@@ -24,6 +24,7 @@ body {
     transition: .3s;
     object-fit: cover;
     box-shadow: 4px 4px 3px 1px #787474;
+    filter: blur();
 }
 
 
