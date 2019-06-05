@@ -29,17 +29,49 @@ Object.keys(breakpoints).forEach(function (breakpoint) {
 
 // ---------> logica para colocar mapas das celulas  <--------------
 
-// var map = L.map(document.getElementById('mapDIV'), {
-//     center: [-23.210362, -45.896853],
-//     zoom: 12
-// });
-
 // var cities = L.layerGroup();
 
 // L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(cities),
 // L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(cities),
 // L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(cities),
 // L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(cities);
+
+
+var iconlogo = L.icon({
+    iconUrl: 'https://pbs.twimg.com/profile_images/1806426743/INSEJEC_Bolinha.png',
+    iconSize: [32,32],
+    iconAnchor: [16, 37],
+    popupAnchor: [0, -28]
+});
+
+var iconigreja = L.icon({
+    iconUrl: 'https://img.icons8.com/metro/420/church.png',
+    iconSize: [32,32],
+    iconAnchor: [16, 37],
+    popupAnchor: [0, -28]
+});
+
+var templo = L.marker([-23.196380, -45.905417], {icon: iconlogo}).bindPopup('<h1>INSEJEC</h1> São José Dos Campos');
+
+var cel = L.geoJSON(celulas, 
+            {pointToLayer: function(feature, latlng){
+                return L.marker(latlng);
+            },
+              onEachFeature: function(feature, layer){
+                  var nome = feature.properties.nome;
+                  var tel = feature.properties.tel;
+                  var lider = feature.properties.lider;
+
+                  layer.bindPopup("<p>Nome: " + nome + "</p>"+ 
+                  "</br>Telefone: " + tel + 
+                  "</br>Lider: " + lider);
+
+                //   layer.on('mouseover', function() {layer.openPopup();});
+                //   layer.on('mouseout', function() {layer.closePopup();});
+              }
+        });
+
+       
 
 var osmAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
@@ -62,103 +94,22 @@ googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}'
 var map = L.map(document.getElementById('mapDIV'), {
     center: [-23.210362, -45.896853],
     zoom: 12,
-    layers: [osm]
+    layers: [osm, cel]
 });
+
+// celula.addTo(map);
 
 
 var baseLayers = {
     "Streets": osm,
-    "Satélite": googleHybrid
-
+    "Satélite": googleHybrid,
+    "Baserelief": baserelief
 };
 
 
 var overlays = {
-    "Células": baserelief
+    "Templo": templo,
+    "Celula": cel
 }
 
 L.control.layers(baseLayers, overlays).addTo(map);
-
-
-
-// exemplo
-// var cities = L.layerGroup();
-
-// L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(cities),
-// L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(cities),
-// L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(cities),
-// L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(cities);
-
-
-// var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-//         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-//         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-//     mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
-
-// // var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
-// //     streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
-
-//     var basetopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/WMTS/tile/1.0.0/USGSTopo/default/default028mm/{z}/{y}/{x}.png', {});
-// var baserelief = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', {});
-
-// var map = L.map('mapDIV', {
-//     center: [39.73, -104.99],
-//     zoom: 10,
-//     // layers: [basetopo, cities]
-// });
-
-// basetopo.addTo(map);
-
-// var baseLayers = {
-//     "Grayscale": basetopo,
-//     "Streets": baserelief
-// };
-
-// var overlays = {
-//     "Cities": cities
-// };
-
-// L.control.layers(baseLayers, overlays).addTo(map);
-
-
-
-
-
-// var map = L.map(document.getElementById('mapDIV'), {
-//     center: [62.7, -144.0],
-//     zoom: 6
-// });
-
-// // Base maps
-// var basetopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/WMTS/tile/1.0.0/USGSTopo/default/default028mm/{z}/{y}/{x}.png', {});
-// var baserelief = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', {});
-
-// basetopo.addTo(map);
-
-// // The trail
-// var thetrail = L.geoJSON(trail, {
-//     color: '#800000',
-//     weight: 3,
-//     dashArray: '12 8 12',
-// });
-
-// thetrail.bindTooltip("The Valdez-Eagle Trail")
-// thetrail.addTo(map);
-
-// var baselayers = {
-//     "Shaded Relief": baserelief,
-//     "National Map topo": basetopo
-// };
-// var overlays = {
-//     "The Trail": thetrail
-// };
-// L.control.layers(baselayers, overlays).addTo(map);
-
-// // Add scalebar
-
-// var scale = L.control.scale()
-// scale.addTo(map)
-
-// // Add attribution
-// map.attributionControl.addAttribution("National Map Topo");
-// map.attributionControl.addAttribution("OpenTopoMap");
