@@ -58,13 +58,20 @@ var cel = L.geoJSON(celulas,
                 return L.marker(latlng);
             },
               onEachFeature: function(feature, layer){
-                  var nome = feature.properties.nome;
-                  var tel = feature.properties.tel;
-                  var lider = feature.properties.lider;
+                  var nome = feature.properties.NomeCelula;
+                  var tel = feature.properties.Fone;
+                  var lider = feature.properties.Lider;
+                  var end = feature.properties.Endereco;
+                  var dia = feature.properties.Dia;
+                  var horario = feature.properties.Horario;
+                  var icon = feature.properties.whats;
 
-                  layer.bindPopup("<p>Nome: " + nome + "</p>"+ 
-                  "</br>Telefone: " + tel + 
-                  "</br>Lider: " + lider);
+                  layer.bindPopup("Célula: <strong>" + nome + "</strong>" +
+                  "</br>Lider: " + lider +
+                  "</br>Contato: " + tel + "<img src=" + icon + ">" +
+                  "</br>Dia da Semana: " + dia +
+                  " Horário: " + horario + 
+                  "</br>Endereço: " + end);
 
                 //   layer.on('mouseover', function() {layer.openPopup();});
                 //   layer.on('mouseout', function() {layer.closePopup();});
