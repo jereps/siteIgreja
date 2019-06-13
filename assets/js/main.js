@@ -64,11 +64,17 @@ var cel = L.geoJSON(celulas,
                   var end = feature.properties.Endereco;
                   var dia = feature.properties.Dia;
                   var horario = feature.properties.Horario;
-                  var icon = feature.properties.whats;
+                  var whats = feature.properties.whats;
+
+                  if(!whats){
+                      var icon = "";
+                  } else {
+                      icon = "<img src=" + whats + ">";
+                  }
 
                   layer.bindPopup("Célula: <strong>" + nome + "</strong>" +
                   "</br>Lider: " + lider +
-                  "</br>Contato: " + tel + "<img src=" + icon + ">" +
+                  "</br>Contato: " + tel + icon +
                   "</br>Dia da Semana: " + dia +
                   " Horário: " + horario + 
                   "</br>Endereço: " + end);
