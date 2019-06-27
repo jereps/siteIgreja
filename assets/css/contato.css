@@ -12,7 +12,7 @@
     width: 600px;
     padding: 40px;
     box-sizing: border-box;
-    background: #fff;
+    background: radial-gradient(800px at 50% 50%, #fff, #ae8877);
     box-shadow: 0 10px 30px rgba(0, 0, 0, .5)
 }
 
