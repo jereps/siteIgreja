@@ -38,7 +38,7 @@ body {
     padding: 0 5px 22px 5px;
     transition: .5s;
     position: relative;
-    margin-top: 160px;
+    margin-top: 120px;
 }
 
 .article-main-text {
@@ -49,29 +49,55 @@ body {
     height: 400px;
     margin: 2px 0;
     transition: .5s;
-    margin-top: 160px;
-    padding: 20px 25px 25px 25px;
+    margin-top: 120px;
+    padding: 10px 20px 20px 20px;
 }
 
-.article-main-text p {
+
+
+.article-main-text-pastores {
+    height: auto;
+    width: 100%;
+    margin-top: 90px;
+    float: left;
+    display: grid;
+    align-items: center;
+    margin: 2px 0;
+    transition: .5s;
+    margin-top: 120px;
+    padding: 20px 20px 20px 20px;
+}
+
+.article-main-text-pastores img {
+        width: 70%;
+        height: 460px;
+        margin: 12px;
+        
+}
+
+.article-main-text p,
+.article-main-text-pastores p {
     font-size: 18px;
     /* color: #565656; */
     color: #777777;
     /* margin: 0; */
     /* margin: 10px 15px 15px; */
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     font-weight: 400;
     line-height: 1.5em;
 }
 
-.article-main-text h2 {
-    font-size: 32px;
+.article-main-text h2,
+.article-main-text-pastores h2 {
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: -.5px;
     line-height: 1.3;
-    margin-bottom: 16px;
+    margin-bottom: 3px;
+    margin-left: 12px;
     color: #655e5e;
 }
+
 
 
 @media (max-width: 600px) {
@@ -99,3 +125,5 @@ body {
         grid-row: 4;
     }
 }
+
+
