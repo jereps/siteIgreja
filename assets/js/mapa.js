@@ -22,7 +22,7 @@ var iconigreja = L.icon({
     popupAnchor: [0, -28]
 });
 
-var templo = L.marker([-23.196380, -45.905417], {icon: iconlogo}).bindPopup('<h1>INSEJEC</h1> São José Dos Campos');
+var templo = L.marker([-23.196380, -45.905417], {icon: iconlogo}).bindPopup('<strong>Templo da INSEJEC</strong></br> São José Dos Campos');
 
 var cel = L.geoJSON(celulas, 
             {pointToLayer: function(feature, latlng){
@@ -78,7 +78,7 @@ googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}'
 var map = L.map(document.getElementById('mapDIV'), {
     center: [-23.210362, -45.896853],
     zoom: 12,
-    layers: [osm, cel]
+    layers: [osm, templo, cel]
 });
 
 // celula.addTo(map);
@@ -87,7 +87,7 @@ var map = L.map(document.getElementById('mapDIV'), {
 var baseLayers = {
     "Streets": osm,
     "Satélite": googleHybrid,
-    "Baserelief": baserelief
+    // "Baserelief": baserelief
 };
 
 
