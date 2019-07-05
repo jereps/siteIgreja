@@ -1,0 +1,82 @@
+body {
+    background: rgba(221, 216, 217, 0.4);
+    background-image: url(/assets/img/FacesCom.jpg);
+    background-size: 900px 1200px;
+    background-attachment: fixed;
+    /* background-position-y: 190px; */
+    /* background-repeat: repeat-x; */
+    background-blend-mode: screen;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.title {
+    /* font-size: 40px; */
+    font-size: calc(3em + 1.5vw);
+    color: #fff;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    /* text-shadow: 2px 3px 6px #d17821; */
+    text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+}
+
+
+.cremos {
+    text-align: left;
+    line-height: 26px;
+    margin-left: 12px;
+    margin-right: 6px;
+}
+
+.foto {
+    width: 100%;
+    display: inline-grid;
+    justify-items: center;
+}
+
+.cremos img {
+    width: 60%;
+    object-fit: initial;
+    height: initial;
+    box-shadow: initial;
+}
+
+.cremos h4 {
+    color: #777777;
+    font-size: 18px;
+    font-style: initial;
+}
+
+.cremos ol {
+    color: #777777;
+    font-size: 18px;
+    padding: 0 0 0 40px;
+    margin-bottom: 25px;
+}
+
+.cremos ol ol {
+    padding: 0 0 0 40px;
+}
+
+.cremos p {
+    margin: 10px 10px 15px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 200%;
+    color: #777777;
+    margin-bottom: 25px;
+}
