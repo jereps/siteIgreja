@@ -61,6 +61,14 @@ body {
     font-style: initial;
 }
 
+/* blockquote */
+.block {
+    text-align: justify;
+    margin: 0px 0px 0px 40px;
+    border: none;
+    padding: 0px;
+  }
+
 .cremos ol {
     color: #777777;
     font-size: 18px;

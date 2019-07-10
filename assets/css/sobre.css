@@ -65,6 +65,23 @@ body {
     justify-items: center;
 }
 
+/* blockquote */
+.block {
+  text-align: justify;
+  margin: 0px 0px 0px 40px;
+  border: none;
+  padding: 0px;
+}
+
+/* lista de itens */
+.list {
+  color: #777777;
+  font-size: 18px;
+  padding: 0 0 0 40px;
+  margin-bottom: 25px;
+  
+}
+
 .cremos .blue{
   color: #497caa;
 }
