@@ -8,6 +8,15 @@
     align-items: center;
 }
 
+.aside {
+    display: none;
+    grid-area: sidebar;
+    position: absolute;
+    top: -10000px;
+    min-width: 180px;
+    max-width: 260px;
+}
+
 .wrapper {
     width: 600px;
     padding: 40px;
