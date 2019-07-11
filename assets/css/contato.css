@@ -130,3 +130,10 @@
     /* background: #6b3aff; */
     box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
 }
+
+@media (max-width: 600px) {
+
+    .wrapper {
+        width: 96vw;
+    }
+}
