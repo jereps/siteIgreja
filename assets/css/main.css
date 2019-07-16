@@ -19,7 +19,7 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
 
 body {
   background: rgba(221, 216, 217, 0.90);
-  background-image: url(/assets/img/FacesCom.jpg);
+  background-image: url(/assets/img/FacesComprimida-min-min.jpg);
 
   background-size: 900px 1200px;
   background-attachment: fixed;
@@ -437,7 +437,8 @@ ul.menu li ul li {
 
 .FotoGrande {
   background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(/assets/img/igreja10x+Grande.jpg);
+  /* background-image: url(/assets/img/igreja10x+Grande.jpg); */
+  background-image: url(/assets/img/igreja10x+.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: color;
@@ -607,8 +608,8 @@ ul.menu li ul li {
   display: flex;
   justify-self: flex-end;
   margin: 116px 0 0;
-  max-height: 708px;
-  background-color: rgb(72, 228, 72);
+  max-height: 703px;
+  /* background-color: rgb(72, 228, 72); */
   box-shadow: 0 1px 3px black;
   min-width: 180px;
   max-width: 260px;
