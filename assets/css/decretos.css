@@ -160,6 +160,11 @@ body {
   width: 25%;
 }
 
+.decretoFace {
+  color: #655e5e;
+text-decoration: none;
+}
+
 .carousel-indicator {
   position: absolute;
 bottom: 10px;
