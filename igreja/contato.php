@@ -36,7 +36,7 @@
       $para = "igrejanacionalsj@yahoo.com.br";
       $assunto = "Mensagem do Site";
       $corpo = "Nome: ".$nome."\r\n E-Mail: ".$replayto."\r\n Mensagem: ".$comentarios;
-      $cabecalho = "From: jeremiason2911@gmail.com"."\r\n".
+      $cabecalho = "From: comunicacao@insejecsjc.com.br"."\r\n".
       "Replay-To: ".$replayto."\r\n"."X-Mailer: PHP/".phpversion();
 
       mail($para, $assunto, $corpo, $cabecalho);
