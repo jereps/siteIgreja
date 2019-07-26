@@ -591,13 +591,14 @@ ul.menu li ul li {
 }
 
 .caption {
-  text-align: center;
-  background: #0006;
-  color: #fff;
-  position: absolute;
   width: 98.4%;
   bottom: 14px;
   height: 50px;
+  color: #fff;
+  padding-top: 13px;
+  text-align: center;
+  position: absolute;
+  background: #0006;
 }
 
 .article-main:nth-child(even):hover {
@@ -873,6 +874,10 @@ h5 {
   .article-main:nth-child(8) img {
     height: 300px;
   }
+
+  .article-main:nth-child(8) img {
+    object-fit: initial;
+  }
   
   .article-main:nth-child(7) img{
       margin-top: 0px;
@@ -945,6 +950,10 @@ h5 {
   .article-main:nth-child(5) img, .article-main:nth-child(6) img,
   .article-main:nth-child(8) img {
     height: 350px;
+  }
+
+  .article-main:nth-child(8) img {
+    object-fit: initial;
   }
   
   .article-main:nth-child(7) img{

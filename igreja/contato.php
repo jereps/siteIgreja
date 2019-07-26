@@ -25,7 +25,27 @@
 
 
 </head>
+<?php
 
+    if(isset($_POST['nome']) && !empty($_POST['nome'])) {
+      $nome = addslashes($_POST['nome']);
+      $tel = addslashes($_POST['tel']);
+      $replayto = addslashes($_POST['replyto']);
+      $comentarios = addslashes($_POST['comentarios']);
+
+      $para = "igrejanacionalsj@yahoo.com.br";
+      $assunto = "Mensagem do Site";
+      $corpo = "Nome: ".$nome."\r\n E-Mail: ".$replayto."\r\n Mensagem: ".$comentarios;
+      $cabecalho = "From: jeremiason2911@gmail.com"."\r\n".
+      "Replay-To: ".$replayto."\r\n"."X-Mailer: PHP/".phpversion();
+
+      mail($para, $assunto, $corpo, $cabecalho);
+
+      // echo "<h2>E-Mail enviado com sucesso!</h2>";
+
+    }
+
+?>
 <body>
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2">
@@ -197,13 +217,16 @@
       <div class="wrapper">
         <h2> envie-nos uma mensagem, pedidos de oração</h2>
 
-        <form action="http://formmail.kinghost.net/formmail.cgi" method="POST">
-          <input type="hidden" name="recipient" value="jeremiason2911@gmail.com">
-          <!-- Pode ser qualquer endereço de email -->
+        <form method="POST">
+
+            <!-- email enviado atraves do formmail.cgi do kinghost -->
+        <!-- <form action="http://formmail.kinghost.net/formmail.cgi" method="POST"> -->
+          <!-- <input type="hidden" name="recipient" value="jeremiason2911@gmail.com">
+          // Pode ser qualquer endereço de email
           <input type="hidden" name="redirect" value="192.168.1.109:5500/contato.html">
-          <!-- Após o envio, o usuário será redirecionado para a página configurada aqui -->
-          <input type="hidden" name="subject" value="teste de assunto"> <!-- Assunto da mensagem -->
-          <input type="hidden" name="email" value="jeremiason2911@gmail.com">
+          // Após o envio, o usuário será redirecionado para a página configurada aqui
+          <input type="hidden" name="subject" value="teste de assunto"> //Assunto da mensagem
+          <input type="hidden" name="email" value="jeremiason2911@gmail.com"> -->
           <!-- Deve ser uma conta de email ativa em seu domínio -->
 
           <div class="input-field">
@@ -222,7 +245,7 @@
           </div>
 
           <div class="input-field">
-            <textarea rows="7" name="Comentarios" required></textarea>
+            <textarea rows="7" name="comentarios" required></textarea>
             <label>mensagem</label>
           </div>
 
