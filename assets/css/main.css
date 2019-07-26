@@ -18,7 +18,7 @@ html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre
 
 
 body {
-  background: rgba(221, 216, 217, 0.90);
+  background: rgb(221, 216, 217);
   background-image: url(/assets/img/FacesCom.jpg);
 
   background-size: 900px 1200px;
@@ -595,10 +595,11 @@ ul.menu li ul li {
   bottom: 14px;
   height: 50px;
   color: #fff;
-  padding-top: 13px;
+  padding-top: 8px;
   text-align: center;
   position: absolute;
   background: #0006;
+  font-size: 22px;
 }
 
 .article-main:nth-child(even):hover {
