@@ -2,10 +2,6 @@
 
 // var cities = L.layerGroup();
 
-// L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(cities),
-// L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(cities),
-// L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(cities),
-// L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(cities);
 
 
 var iconlogo = L.icon({
@@ -50,8 +46,6 @@ var cel = L.geoJSON(celulas,
                   " Horário: " + horario + 
                   "</br>Endereço: " + end);
 
-                //   layer.on('mouseover', function() {layer.openPopup();});
-                //   layer.on('mouseout', function() {layer.closePopup();});
               }
         });
 

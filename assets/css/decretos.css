@@ -12,10 +12,9 @@
 
 body {
   background: rgb(221, 216, 217);
-  background-image: url(../img/FacesCom.jpg);
+  background-image: url(../img/FacesCom4.jpg);
   background-size: 900px 1200px;
   background-attachment: fixed;
-  background-blend-mode: screen;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }

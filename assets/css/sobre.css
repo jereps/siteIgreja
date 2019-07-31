@@ -1,17 +1,12 @@
 body {
-  background: rgb(221, 216, 217);
-  background-image: url(/assets/img/FacesCom.jpg);
+  background-image: url(/assets/img/FacesCom4.jpg);
   background-size: 900px 1200px;
   background-attachment: fixed;
-  /* background-position-y: 190px; */
-  /* background-repeat: repeat-x; */
-  background-blend-mode: screen;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
 
 .title {
-  /* font-size: 40px; */
   font-size: calc(3em + 1.5vw);
   color: #fff;
   font-weight: 700;
@@ -19,7 +14,6 @@ body {
   margin-bottom: 40px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  /* text-shadow: 2px 3px 6px #d17821; */
   text-shadow: 0 1px 0 #ccc,
   0 2px 0 #c9c9c9,
   0 3px 0 #bbb,
