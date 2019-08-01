@@ -402,19 +402,38 @@ ul.menu li ul li {
 
 
 .FotoGrande {
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(/assets/img/igreja10x+.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: color;
-  object-fit: cover;
   margin-top: 60px;
-  background-size: 99vw 580px;
   grid-area: nav;
-  height: 600px;
+  height: 700px;
   color: rgb(233, 222, 201);
   display: flex;
   justify-content: center;
+}
+
+.banner-background {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.69);
+  background-image: url(/assets/img/igreja10x+.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-post-background {
+  /* background-size: cover; */
+  background-size: 96% 93%;
+  background-position: center;
 }
 
 .FotoGrande h1 {
@@ -666,6 +685,28 @@ h5 {
 }
 
 @media (max-width: 600px) {
+
+  .FotoGrande {
+    /* height: 520px; */
+    height: 357px;
+  }
+
+  .FotoGrande h1 {
+    top: 74px;
+  }
+
+  .banner-background {
+    position: relative;
+    height: 100%;
+  }
+
+  .banner-post-background {
+    background-size: contain;
+    /* background-size: 103% 85%; */
+    background-position-y: 95px;
+  }
+
+
   .container {
     display: grid;
     grid-template-columns: auto;
@@ -831,47 +872,56 @@ h5 {
     object-fit: cover;
     height: 350px;
     box-shadow: 4px 4px 3px 1px #787474;
-  
+
   }
 
-  .article-main:nth-child(3),.article-main:nth-child(4),
-  .article-main:nth-child(6),.article-main:nth-child(7){
+  .article-main:nth-child(3),
+  .article-main:nth-child(4),
+  .article-main:nth-child(6),
+  .article-main:nth-child(7) {
     width: 47.5%;
   }
 
-  .article-main:nth-child(5), .article-main:nth-child(9){
+  .article-main:nth-child(5),
+  .article-main:nth-child(9) {
     width: 95%;
   }
 
 
-  
-  .article-main:nth-child(3) img, .article-main:nth-child(4) img,
-  .article-main:nth-child(5) img, .article-main:nth-child(6) img,
-  .article-main:nth-child(8) img {
+
+  .article-main:nth-child(3) img,
+  .article-main:nth-child(4) img,
+  .article-main:nth-child(5) img,
+  .article-main:nth-child(6) img {
     height: 350px;
   }
 
   .article-main:nth-child(8) img {
     object-fit: initial;
+    height: initial;
   }
-  
-  .article-main:nth-child(7) img{
-      margin-top: 0px;
+
+  .article-main:nth-child(7) img {
+    margin-top: 0px;
   }
 
   .caption {
     width: 95.5%;
   }
-  
+
+  article.article-main:nth-child(8)>a:nth-child(1)>h2:nth-child(2) {
+    width: 97.5%;
+  }
+
   .aside {
     min-width: 180px;
     max-width: 260px;
   }
 
-  .aside .fb2{
+  .aside .fb2 {
     display: none;
   }
-  
+
   .footer {
     display: grid;
     grid-template-columns: auto;
