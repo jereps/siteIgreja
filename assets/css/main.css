@@ -818,6 +818,7 @@ h5 {
 
   .article-main:nth-child(8) img {
     object-fit: initial;
+    height: 15em;
   }
   
   .article-main:nth-child(7) img{
