@@ -502,6 +502,7 @@ ul.menu li ul li {
 }
 .article-main:nth-child(8) img{
     height: 280px;
+    object-fit: initial;
 }
 /* FIM SEM GRADY LAYOUT */
 
